@@ -5,8 +5,6 @@
 set -e
 
 REPO=ansible-arch-install
-DISK=/dev/sda
-BOOT=/dev/sda1
 
 pacman -Sy --needed ansible git parted
 

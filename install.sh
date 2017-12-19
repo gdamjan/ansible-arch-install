@@ -4,6 +4,9 @@
 
 set -e
 
+DISK=/dev/sda
+BOOT=/dev/sda1
+
 # mirrorlist
 # ???
 
