@@ -20,6 +20,10 @@ parted -s $DISK -- \
     mkpart primary 22.5GiB 100%
 
 # create luks
+cryptsetup luksFormat ${DISK}3
+cryptsetup luksFormat ${DISK}4
+cryptsetup open --type luks ${DISK}3 root
+cryptsetup open --type luks ${DISK}4 home
 
 # create filesystems
 mkfs.ext4 /dev/mapper/root
