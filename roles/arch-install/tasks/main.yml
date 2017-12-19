@@ -1,0 +1,39 @@
+---
+- name: install base packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages.base }}"
+
+- name: install gui packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages.gui }}"
+
+- name: install kde packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages.kde }}"
+
+
+- name: generate locales
+  locale_gen:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ all_locales }}"
+
+- name: set system locale
+  command: localectl set-locale "LANG={{ system_locale }}"
+
+- name: enable basic services
+  systemd:
+    enabled: yes
+    service: "{{ item }}"
+    daemon_reload: no
+  with_items: "{{ system_services }}"
+
+- command: timedatectl set-timezone "{{ system_timezone }}"
+- command: timedatectl set-ntp yes
+- command: hostnamectl set-hostname "{{ system_hostname }}"

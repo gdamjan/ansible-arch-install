@@ -1,0 +1,95 @@
+---
+all_locales:
+  - en_GB.UTF-8
+  - mk_MK.UTF-8
+
+system_locale: en_GB.UTF-8
+system_timezone: Europe/Skopje
+
+system_services:
+  - sddm.service
+  - systemd-resolved.service
+  - NetworkManager.service
+  - bluetooth.service
+  - docker.socket
+  - org.cups.cupsd.socket
+  - pcscd.socket
+  - sshd.socket
+
+packages:
+  basic:
+    - base-devel
+    - bash-completion
+    - crda
+    - cryptsetup
+    - efibootmgr
+    - encfs
+    - intel-ucode
+    - iputils
+    - iw
+    - linux
+    - man-db
+    - pciutils
+    - procps-ng
+    - psmisc
+    - python
+    - python-gobject
+    - python-pyqt5
+    - rfkill
+    - sshfs
+    - strace
+    - systemd-sysvcompat
+    - tcpdump
+    - thin-provisioning-tools
+    - ttf-dejavu
+    - usbutils
+    - vim
+    - wget
+    - wireless_tools
+  gui:
+    - firefox
+    - chromium
+    - xorg-server
+    - xorg-xauth
+    - xorg-xdpyinfo
+    - xorg-xev
+    - xorg-xinput
+    - xorg-xmag
+    - gst-plugins-bad
+    - gst-plugins-good
+    - gst-plugins-ugly
+  kde:
+    - ark
+    - bluedevil
+    - dolphin
+    - gwenview
+    - kate
+    - kdeconnect
+    - kio-extras
+    - kipi-plugins
+    - konsole
+    - libappindicator-gtk3
+    - okteta
+    - okular
+    - plasma-desktop
+    - plasma-nm
+    - plasma-pa
+    - plasma-workspace
+    - powerdevil
+    - pulseaudio-bluetooth
+    - spectacle
+    - sddm
+    - sddm-kcm
+    - smplayer
+    - yakuake
+  aur:
+    - aurget
+    - libcommuni-git
+    - communi-desktop-git
+    - geteltorito
+    - secure-boot
+    - messengerfordesktop-git
+    - visual-studio-code
+    - nextcloud-client
+    - keybase-bin
+    - foo2zjs-nightly
