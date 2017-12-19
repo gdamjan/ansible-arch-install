@@ -16,8 +16,8 @@ parted -s $DISK -- \
     mkpart ESP fat32 2MiB 258MiB \
     set 1 boot on \
     mkpart primary linux-swap 258MiB 2.258GiB \
-    mkpart primary 2.258GiB 22.5GiB \
-    mkpart primary 22.5GiB 100%
+    mkpart primary 2.258GiB 22GiB \
+    mkpart primary 22GiB 100%
 
 # create luks
 cryptsetup luksFormat ${DISK}3
