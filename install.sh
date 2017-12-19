@@ -28,6 +28,7 @@ cryptsetup open --type luks ${DISK}4 home
 # create filesystems
 mkfs.ext4 /dev/mapper/root
 mkfs.ext4 /dev/mapper/home
+mkfs.vfat $BOOT
 
 # mount root,boot,home
 mount /dev/mapper/root /mnt
