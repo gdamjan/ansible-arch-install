@@ -39,7 +39,7 @@ mount $BOOT /mnt/boot
 # arch basics
 pacstrap -i /mnt pacman
 
-ansible-playbook ./install.yml
+ansible-playbook ./install.yml -i '/mnt,'
 
 
 enter hostname
