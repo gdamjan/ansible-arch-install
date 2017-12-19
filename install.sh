@@ -46,3 +46,5 @@ enter hostname
 enter username/password
 
 setup bootloader
+
+umount -R /mnt

@@ -1,0 +1,10 @@
+---
+- name: install arch distro to /mnt
+  connection: chroot
+  user: root
+  hosts: /mnt
+  gather_facts: true
+  roles:
+    - arch-basic
+      #- arch-kde
+      #- damjan
