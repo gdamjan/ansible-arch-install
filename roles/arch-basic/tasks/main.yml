@@ -1,9 +1,9 @@
 ---
-- name: install base packages
+- name: install basic packages
   pacman:
     name: "{{ item }}"
     state: present
-  with_items: "{{ packages.base }}"
+  with_items: "{{ packages.basic }}"
 
 - name: install gui packages
   pacman:

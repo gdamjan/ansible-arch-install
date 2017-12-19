@@ -37,9 +37,9 @@ mount /dev/mapper/home /mnt/home
 mount $BOOT /mnt/boot
 
 # arch basics
-pacstrap -i /mnt pacman
+pacstrap -i /mnt pacman python2
 
-ansible-playbook ./install.yml -i '/mnt,'
+ansible-playbook ./install.yml -i '/mnt,' -e 'ansible_python_interpreter=/usr/bin/python2.7'
 
 
 enter hostname
